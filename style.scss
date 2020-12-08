@@ -1,2 +1,12 @@
-@import "config/colors.scss";
+
 @import "components/index.scss";
+
+
+body {
+  background-color: $light-black !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+$black: #0b090a;
+$light-black: #4B4B4C;
