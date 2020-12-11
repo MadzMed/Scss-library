@@ -1,25 +1,66 @@
 /////////////// FUNCTIONS ///////////////////////
 
-@function calc-height($iter, $const) {
-  @return  $iter * $const;
+@function calc-size($iter, $const) {
+  @return  $iter * $const * 1px;
 }
 
 @function calc-borders($iter, $const) {
-  @return @iter * $const;
+  @return $iter * $const * 1px;
+}
+
+@function calc-font-size($iter, $const) {
+  @return $iter * $const * 1em;
 }
 
 
 .navbar {
   width: 100%;
-  height: 50px;
+  height: $default_height_navbar;
   background-color: $black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @for $i from 1 through 5 {
   .navbar-#{$i} {
     width: 100%;
-    height: calc-height($i, 25);
+    height: calc-size($i, 25);
     background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+      width: calc-size($i, 20);
+      height: calc-size($i, 20);
+      background-image: url(images/logo.png);
+      background-size: contain;
+      background-position: center;
+    }
+
+    .navigation-items {
+      width: 40%;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      ul {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        list-style: none;
+        li {
+          font-size: calc-font-size($i, 0.25);
+        }
+      }
+      a {
+        text-decoration: none;
+        font-size: calc-font-size($i, 0.50);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 

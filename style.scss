@@ -1,6 +1,7 @@
+// import configuration scss
+@import "config/index.scss";
 
-@import "config/_colors.scss";
-
+// import all the components
 @import "components/index.scss";
 
 body {
