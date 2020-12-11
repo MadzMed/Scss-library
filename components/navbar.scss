@@ -1,3 +1,12 @@
+/////////////// FUNCTIONS ///////////////////////
+
+@function calc-height($iter, $const) {
+  @return  $iter * $const;
+}
+
+@function calc-borders($iter, $const) {
+  @return @iter * $const;
+}
 
 
 .navbar {
@@ -6,11 +15,15 @@
   background-color: $black;
 }
 
-.navbar-5 {
-  width: 100%;
-  height: 100px;
-  background-color: $light-black;
+@for $i from 1 through 5 {
+  .navbar-#{$i} {
+    width: 100%;
+    height: calc-height($i, 25);
+    background-color: white;
+  }
 }
+
+
 
 // @for $i from 1 through 5 {
 //   .navbar-#{$i} {
@@ -18,3 +31,4 @@
 //     background-color: blue;
 //   }
 // }
+
