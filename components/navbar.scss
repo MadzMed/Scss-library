@@ -22,15 +22,25 @@
   align-items: center;
 }
 
+.navbar-black {
+  background-color: $black;
+}
+
+.navbar-gray {
+  background-color: $light-black;
+}
+
+.navbar-blue-marine {
+  background-color: $blue-marine;
+}
+
 @for $i from 1 through 5 {
   .navbar-#{$i} {
     width: 100%;
     height: calc-size($i, 25);
-    background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     .logo {
       width: calc-size($i, 20);
       height: calc-size($i, 20);
