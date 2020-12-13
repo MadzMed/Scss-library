@@ -1,11 +1,10 @@
 // import configuration scss
-@import "config/index.scss";
+@import "config";
 
 // import all the components
-@import "components/index.scss";
+@import "components";
 
 body {
-  background-color: $light-black !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }

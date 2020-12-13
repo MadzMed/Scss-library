@@ -9,6 +9,7 @@
 
 .navbar-black {
   background-color: #0b090a;
+  color: reverse(#0b090a);
 }
 
 .navbar-gray {
@@ -204,10 +205,32 @@
   text-decoration: none;
 }
 
+.navbar-with-collapse {
+  width: 100vw;
+  height: 88px;
+}
+
+.item-effect-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(0, 1);
+}
+.item-effect-underline:hover:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 body {
-  background-color: #4B4B4C !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
